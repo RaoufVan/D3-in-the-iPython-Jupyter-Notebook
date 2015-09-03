@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <script type="text/javascript" src="http://mbostock.github.io/d3/talk/20111018/d3/d3.js"></script>
+    <script type="text/javascript" src="http://mbostock.github.io/d3/talk/20111018/d3/d3.geom.js"></script>
+    <script type="text/javascript" src="http://mbostock.github.io/d3/talk/20111018/d3/d3.layout.js"></script>
+    <style type="text/css">
+    </style>
+  
+<body>
+<!-- nice simple setup template for D3.js -->
+    <div id="body">
+    <script type="text/javascript">
+        
+        // setup width and height
+        var w = {width},
+        h = {height};
+
+        // draw the canvas
+        var canvas = d3.select("#body").append("svg:svg")
+            .attr("width", w)
+            .attr("height", h);
+            
+        // pop a rectangle on the canvas
+         var rect = canvas.append("svg:rect")
+            .attr("x", 100)
+            .attr("y", 100)
+            .attr("width", 300)
+            .attr("height", 200)
+            
+        // pop some text on the canvas
+        var someText = canvas.append("svg:text")
+            .attr("x", 150)
+            .attr("y", 150)
+            .text(function(d) {
+                    return 'Hello world!'
+                })
+            .attr("font-family", "sans-serif")
+            .attr("font-size", "20px")
+            .attr("fill", "orange");
+            
+
+    </script>
+  </body>
+</html>
